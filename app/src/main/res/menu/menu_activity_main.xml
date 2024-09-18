@@ -11,6 +11,7 @@
         android:id="@+id/item_settings"
         android:icon="@drawable/ic_home_setting"
         android:title="@string/str_action_setting"
+        android:visible="false"
         app:iconTint="@color/colorPrimaryText"
         app:showAsAction="ifRoom" />
 

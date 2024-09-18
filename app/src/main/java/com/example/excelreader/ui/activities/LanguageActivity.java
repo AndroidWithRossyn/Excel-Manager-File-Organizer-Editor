@@ -1,6 +1,5 @@
 package com.example.excelreader.ui.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,7 +13,6 @@ import com.example.excelreader.GlobalConstant;
 import com.example.excelreader.R;
 import com.example.excelreader.SharedPreferenceUtils;
 import com.example.excelreader.adapter.LanguageAdapter;
-import com.example.excelreader.ads.NativeAdsAdmob;
 import com.example.excelreader.model.Language;
 
 import java.util.ArrayList;
@@ -30,7 +28,7 @@ public class LanguageActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
         getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.color_excel));
-        NativeAdsAdmob.loadNativeAdsBannerBig(this, null);
+
 
         recyclerView = findViewById(R.id.rcv_language_list);
         arrayList = GlobalConstant.createArrayLanguage();
@@ -52,24 +50,6 @@ public class LanguageActivity extends BaseActivity {
             }
         });
 
-//        findViewById(R.id.iv_select_over).setOnClickListener(view -> FullAds.showAds(LanguageActivity.this, new AdClosedListener() {
-//            @Override
-//            public void AdClosed() {
-//                SharedPreferenceUtils.getInstance(LanguageActivity.this).setBoolean(GlobalConstant.LANGUAGE_SET, true);
-//                SharedPreferenceUtils.getInstance(LanguageActivity.this).setString(GlobalConstant.LANGUAGE_NAME, arrayList.get(langChoice).getNameLanguage());
-//                SharedPreferenceUtils.getInstance(LanguageActivity.this).setString(GlobalConstant.LANGUAGE_KEY, arrayList.get(langChoice).getKeyLanguage());
-//                SharedPreferenceUtils.getInstance(LanguageActivity.this).setInt(GlobalConstant.LANGUAGE_KEY_NUMBER, langChoice);
-//                Intent refresh = new Intent(LanguageActivity.this, MainActivity.class);
-//                refresh.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-//                startActivity(refresh);
-//                finish();
-//            }
-//
-//            @Override
-//            public void AdLoad() {
-//
-//            }
-//        }));
     }
 
 }

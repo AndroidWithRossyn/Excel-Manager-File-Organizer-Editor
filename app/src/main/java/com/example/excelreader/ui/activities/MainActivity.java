@@ -66,12 +66,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         initToolBar();
         initViews();
-//        initData();
+
         initListener();
         initViewPager2();
         checkPermission();
         setUpExitDialog();
-//        NativeAdsAdmob.loadNativeBanner2(this, null);
+
         getData();
         mBottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int idMenu = item.getItemId();
@@ -360,6 +360,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         if (doubleBack) {
             exitDialog.show();
         } else {

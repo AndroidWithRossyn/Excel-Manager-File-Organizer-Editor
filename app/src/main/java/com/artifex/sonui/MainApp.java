@@ -3,17 +3,7 @@ package com.artifex.sonui;
 import android.content.Context;
 
 import com.artifex.solib.ConfigOptions;
-import com.example.excelreader.GlobalConstant;
 import com.example.excelreader.MyApplication;
-import com.example.excelreader.SharedPreferenceUtils;
-import com.example.excelreader.Utils;
-import com.example.excelreader.ads.FullAds;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
-
-
-import java.util.Collections;
-import java.util.List;
 
 public class MainApp extends MyApplication {
     private static Context context;

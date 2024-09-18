@@ -199,8 +199,5 @@
         android:orientation="horizontal"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent">
-
-        <include layout="@layout/ad_container_native_banner_1" />
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

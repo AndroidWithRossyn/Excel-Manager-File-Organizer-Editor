@@ -34,9 +34,6 @@ public class GlobalConstant {
     public static final String ACTION_UPDATE_ALL_FAVORITE = "update_all_favorite";
 
     public static final String KEY_DATA_FROM_OUTSIDE = "data123";
-    public static final String ADS_COUNT_OPEN_FILE = "count_ads";
-    public static final String ADS_COUNT_OPEN_TYPE = "count_ads_type";
-    public static final String ADS_COUNT_BACK = "count_ads_back";
     public static final String RATE_APP = "RATE_APP";
     public static String NIGHT_MODE_KEY = "night_mode";
 
@@ -62,8 +59,7 @@ public class GlobalConstant {
     public static final String KEY_SELECTED_FILE_URI = "KEY_SELECTED_FILE_URI";
     public static final String KEY_SELECTED_FILE_NAME = "KEY_SELECTED_FILE_NAME";
     public static final int REQUEST_CODE_PICK_FILE = 1321;
-    public static String EMAIL_FEEDBACK = "goat.mobile.apps@gmail.com";
-    public static String FAMILY_APP = "https://play.google.com/store/apps/dev?id=6127028344835403599";
+    public static String EMAIL_FEEDBACK = "your@gmail.com";
 
     public static String FILE_TYPE = "file_type";
     public static String LANGUAGE_SET = "language_set";

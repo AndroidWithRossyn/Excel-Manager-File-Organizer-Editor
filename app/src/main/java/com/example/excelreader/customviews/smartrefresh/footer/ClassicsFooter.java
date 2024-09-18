@@ -19,10 +19,7 @@ import com.example.excelreader.customviews.smartrefresh.internal.InternalClassic
 import com.example.excelreader.customviews.smartrefresh.internal.ProgressDrawable;
 import com.example.excelreader.customviews.smartrefresh.util.SmartUtil;
 
-/**
- * 经典上拉底部组件
- * Created by scwang on 2017/5/28.
- */
+
 @SuppressWarnings({"unused", "UnusedReturnValue"})
 public class ClassicsFooter extends InternalClassics<ClassicsFooter> implements RefreshFooter {
 

@@ -14,18 +14,13 @@
         app:titleTextAppearance="@style/TitleCollapseAppBar" />
 
 
-    <include
-        android:id="@+id/ad_container"
-        layout="@layout/ad_container_native_banner_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar" />
+
 
     <ScrollView
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ad_container"
+        android:layout_below="@+id/toolbar"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:scrollbars="none">

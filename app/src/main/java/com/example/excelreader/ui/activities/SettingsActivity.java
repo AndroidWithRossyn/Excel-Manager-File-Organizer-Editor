@@ -1,7 +1,6 @@
 package com.example.excelreader.ui.activities;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
@@ -20,7 +19,6 @@ import com.example.excelreader.GlobalConstant;
 import com.example.excelreader.R;
 import com.example.excelreader.SharedPreferenceUtils;
 import com.example.excelreader.Utils;
-import com.example.excelreader.ads.NativeAdsAdmob;
 import com.example.excelreader.db.DbHelper;
 import com.example.excelreader.listener.OnConfirmListener;
 import com.example.excelreader.ui.dialog.ConfirmDialog;
@@ -34,7 +32,6 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         setContentView(R.layout.activity_settings);
         initToolBar();
         initViews();
-        NativeAdsAdmob.loadNativeBanner1(this,null);
     }
     private void initToolBar() {
         Toolbar toolbar = findViewById(R.id.toolbar);

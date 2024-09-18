@@ -1,6 +1,5 @@
 package com.example.excelreader.ui.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -18,7 +17,6 @@ import com.example.excelreader.BaseActivity;
 import com.example.excelreader.R;
 import com.example.excelreader.Utils;
 import com.example.excelreader.adapter.ListFileAdapter;
-import com.example.excelreader.ads.NativeAdsAdmob;
 import com.example.excelreader.customviews.EmptyRecyclerView;
 import com.example.excelreader.customviews.smartrefresh.api.RefreshLayout;
 import com.example.excelreader.customviews.smartrefresh.header.ClassicsHeader;
@@ -48,7 +46,6 @@ public class SearchActivity extends BaseActivity implements OfficeClickListener 
         getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.color_excel));
         initViews();
         new GetDocument(this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        NativeAdsAdmob.loadNativeBanner1(mActivity, null);
 
     }
 

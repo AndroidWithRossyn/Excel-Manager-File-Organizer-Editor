@@ -59,7 +59,6 @@ import com.example.excelreader.GlobalConstant;
 import com.example.excelreader.R;
 import com.example.excelreader.ui.activities.ViewOfficeActivity;
 import com.example.excelreader.adapter.ColorPickAdapter;
-import com.example.excelreader.ads.NativeAdsAdmob;
 import com.example.excelreader.customviews.BottomBtn;
 import com.example.excelreader.customviews.EditBtn;
 import com.example.excelreader.ui.dialog.GoPageDialog;
@@ -711,8 +710,7 @@ public class NUIDocView extends FrameLayout implements OnClickListener, DocViewH
                         NUIDocView var3 = NUIDocView.this;
                         var3.progressDialog = new ProgressDialog(var3.getContext(), R.style.sodk_editor_alert_dialog_style);
                         ProgressDialog var4 = NUIDocView.this.progressDialog;
-                        String var2 = NUIDocView.this.getResources().getString(R.string.sodk_editor_searching) +
-                                "...";
+                        String var2 = NUIDocView.this.getResources().getString(R.string.sodk_editor_searching) + "...";
                         var4.setMessage(var2);
                         NUIDocView.this.progressDialog.setCancelable(false);
                         NUIDocView.this.progressDialog.setButton(-2, NUIDocView.this.getResources().getString(R.string.sodk_editor_cancel), new DialogInterface.OnClickListener() {
@@ -767,7 +765,7 @@ public class NUIDocView extends FrameLayout implements OnClickListener, DocViewH
 
     protected void afterFirstLayoutComplete() {
 
-        NativeAdsAdmob.loadNativeBanner1(activity(), null);
+
 
         this.mFinished = false;
         if (this.mConfigOptions.r()) {
@@ -1079,9 +1077,7 @@ public class NUIDocView extends FrameLayout implements OnClickListener, DocViewH
                                 if (var7.startsWith("---")) {
                                     String var4 = NUIDocView.this.getResources().getString(R.string.sodk_editor_cant_create_temp_file);
                                     var3 = NUIDocView.this.getContext().getString(R.string.sodk_editor_content_error);
-                                    String var11 = NUIDocView.this.getContext().getString(R.string.sodk_editor_error_opening_from_other_app) +
-                                            ": \n\n" +
-                                            var4;
+                                    String var11 = NUIDocView.this.getContext().getString(R.string.sodk_editor_error_opening_from_other_app) + ": \n\n" + var4;
                                     Utilities.showMessage(var9, var3, var11);
                                     return;
                                 }
@@ -1094,8 +1090,7 @@ public class NUIDocView extends FrameLayout implements OnClickListener, DocViewH
                                 NUIDocView.this.l = var6.getPath();
                                 if (NUIDocView.this.l == null) {
                                     Utilities.showMessage(var9, NUIDocView.this.getContext().getString(R.string.sodk_editor_invalid_file_name), NUIDocView.this.getContext().getString(R.string.sodk_editor_error_opening_from_other_app));
-                                    String var8 = " Uri has no path: " +
-                                            var6;
+                                    String var8 = " Uri has no path: " + var6;
                                     Log.e("NUIDocView", var8);
                                     return;
                                 }
@@ -1763,9 +1758,9 @@ public class NUIDocView extends FrameLayout implements OnClickListener, DocViewH
 
     protected void goBack() {
 
-        boolean headerShow = this.headerContainer !=null && this.headerContainer.getVisibility()==GONE;
-        boolean bottomShow = this.bottomContainer!=null&&this.bottomContainer.getVisibility()==GONE;
-        if (headerShow|| bottomShow) {
+        boolean headerShow = this.headerContainer != null && this.headerContainer.getVisibility() == GONE;
+        boolean bottomShow = this.bottomContainer != null && this.bottomContainer.getVisibility() == GONE;
+        if (headerShow || bottomShow) {
             this.onFullScreenShow();
         } else {
             this.prepareToGoBack();
@@ -1780,61 +1775,59 @@ public class NUIDocView extends FrameLayout implements OnClickListener, DocViewH
                                 var2 = var3;
                             }
                         }
-                        (new Builder(NUIDocView.this.activity(), R.style.sodk_editor_alert_dialog_style)).setTitle(R.string.sodk_editor_document_has_been_modified)
-                                .setMessage(R.string.sodk_editor_would_you_like_to_save_your_changes).setCancelable(false)
-                                .setPositiveButton(var2, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface var1, int var2) {
-                                        var1.dismiss();
-                                        NUIDocView.this.preSaveQuestion(new Runnable() {
-                                            public void run() {
-                                                if (NUIDocView.this.k != null) {
-                                                    NUIDocView.this.onCustomSaveButton();
-                                                } else if (NUIDocView.this.T) {
-                                                    NUIDocView.this.a(true);
-                                                } else {
-                                                    NUIDocView.this.mSession.getDoc().a(NUIDocView.this.mSOFileState.getInternalPath(), new SODocSaveListener() {
-                                                        public void onComplete(int var1, int var2) {
-                                                            if (var1 == 0) {
-                                                                NUIDocView.this.mSOFileState.saveFile();
-                                                                if (NUIDocView.this.n != null) {
-                                                                    NUIDocView.this.n.postSaveHandler(new SOSaveAsComplete() {
-                                                                        public void onComplete(int var1, String var2) {
-                                                                            NUIDocView.this.mSOFileState.closeFile();
-                                                                            NUIDocView.this.prefinish();
-                                                                        }
-                                                                    });
-                                                                } else {
+                        (new Builder(NUIDocView.this.activity(), R.style.sodk_editor_alert_dialog_style)).setTitle(R.string.sodk_editor_document_has_been_modified).setMessage(R.string.sodk_editor_would_you_like_to_save_your_changes).setCancelable(false).setPositiveButton(var2, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface var1, int var2) {
+                                var1.dismiss();
+                                NUIDocView.this.preSaveQuestion(new Runnable() {
+                                    public void run() {
+                                        if (NUIDocView.this.k != null) {
+                                            NUIDocView.this.onCustomSaveButton();
+                                        } else if (NUIDocView.this.T) {
+                                            NUIDocView.this.a(true);
+                                        } else {
+                                            NUIDocView.this.mSession.getDoc().a(NUIDocView.this.mSOFileState.getInternalPath(), new SODocSaveListener() {
+                                                public void onComplete(int var1, int var2) {
+                                                    if (var1 == 0) {
+                                                        NUIDocView.this.mSOFileState.saveFile();
+                                                        if (NUIDocView.this.n != null) {
+                                                            NUIDocView.this.n.postSaveHandler(new SOSaveAsComplete() {
+                                                                public void onComplete(int var1, String var2) {
                                                                     NUIDocView.this.mSOFileState.closeFile();
                                                                     NUIDocView.this.prefinish();
                                                                 }
-                                                            } else {
-                                                                NUIDocView.this.mSOFileState.closeFile();
-                                                                String var3 = String.format(NUIDocView.this.activity().getString(R.string.sodk_editor_error_saving_document_code), var2);
-                                                                Utilities.showMessage(NUIDocView.this.activity(), NUIDocView.this.activity().getString(R.string.sodk_editor_error), var3);
-                                                            }
-
+                                                            });
+                                                        } else {
+                                                            NUIDocView.this.mSOFileState.closeFile();
+                                                            NUIDocView.this.prefinish();
                                                         }
-                                                    });
-                                                }
+                                                    } else {
+                                                        NUIDocView.this.mSOFileState.closeFile();
+                                                        String var3 = String.format(NUIDocView.this.activity().getString(R.string.sodk_editor_error_saving_document_code), var2);
+                                                        Utilities.showMessage(NUIDocView.this.activity(), NUIDocView.this.activity().getString(R.string.sodk_editor_error), var3);
+                                                    }
 
-                                            }
-                                        }, new Runnable() {
-                                            public void run() {
-                                            }
-                                        });
+                                                }
+                                            });
+                                        }
+
                                     }
-                                }).setNegativeButton(R.string.sodk_editor_discard, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface var1, int var2) {
-                                        var1.dismiss();
-                                        NUIDocView.this.mSOFileState.closeFile();
-                                        NUIDocView.this.e = Boolean.FALSE;
-                                        NUIDocView.this.prefinish();
+                                }, new Runnable() {
+                                    public void run() {
                                     }
-                                }).setNeutralButton(R.string.sodk_editor_continue_editing, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface var1, int var2) {
-                                        var1.dismiss();
-                                    }
-                                }).create().show();
+                                });
+                            }
+                        }).setNegativeButton(R.string.sodk_editor_discard, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface var1, int var2) {
+                                var1.dismiss();
+                                NUIDocView.this.mSOFileState.closeFile();
+                                NUIDocView.this.e = Boolean.FALSE;
+                                NUIDocView.this.prefinish();
+                            }
+                        }).setNeutralButton(R.string.sodk_editor_continue_editing, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface var1, int var2) {
+                                var1.dismiss();
+                            }
+                        }).create().show();
                     }
                 });
             } else {

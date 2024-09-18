@@ -157,6 +157,7 @@ public class NUIActivity extends BaseActivity {
     }
 
     protected void onActivityResult(int var1, int var2, Intent var3) {
+        super.onActivityResult(var1, var2, var3);
         NUIView var4 = this.mNUIView;
         if (var4 != null) {
             var4.onActivityResult(var1, var2, var3);
@@ -165,6 +166,7 @@ public class NUIActivity extends BaseActivity {
     }
 
     public void onBackPressed() {
+        super.onBackPressed();
         NUIView var1 = this.mNUIView;
         if (var1 != null) {
             var1.onBackPressed();
@@ -200,6 +202,7 @@ public class NUIActivity extends BaseActivity {
     }
 
     public void onNewIntent(final Intent var1) {
+        super.onNewIntent(var1);
         ConfigOptions.a();
         if (this.isDocModified()) {
             Utilities.yesNoMessage(this, this.getString(R.string.sodk_editor_new_intent_title), this.getString(R.string.sodk_editor_new_intent_body), this.getString(R.string.sodk_editor_new_intent_yes_button), this.getString(R.string.sodk_editor_new_intent_no_button), new Runnable() {

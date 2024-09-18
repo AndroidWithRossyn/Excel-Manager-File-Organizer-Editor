@@ -61,7 +61,7 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/poppins_semibold"
                 android:maxLines="1"
-                android:text="Privacy policy.docx"
+                android:text="your file.xls"
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="14sp" />
 

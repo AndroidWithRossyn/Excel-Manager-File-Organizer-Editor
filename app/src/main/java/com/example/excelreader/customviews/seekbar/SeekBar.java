@@ -45,11 +45,11 @@ public class SeekBar {
 
     private int indicatorShowMode;
 
-    //进度提示背景的高度，宽度如果是0的话会自适应调整
+
     //Progress prompted the background height, width,
     private int indicatorHeight;
     private int indicatorWidth;
-    //进度提示背景与按钮之间的距离
+
     //The progress indicates the distance between the background and the button
     private int indicatorMargin;
     private int indicatorDrawableId;
